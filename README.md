@@ -75,19 +75,6 @@ One of the main goals of this repository is to recognize **patterns instead of m
 ---
 
 
-# 🏆 Problem-Solving Stats
-
-<div align="center">
-
-| 📌 Metric       | 🔢 Count |
-| --------------- | -------: |
-| Problems Solved |  **100+** |
-| Easy            |   **39** |
-| Medium          |   **58** |
-| Hard            |   **7** |
-| Languages       |  **C++** |
-
-</div>
 
 
 
