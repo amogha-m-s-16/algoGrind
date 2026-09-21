@@ -11,20 +11,20 @@
 class Solution {
 public:
     ListNode* insertionSortList(ListNode* head) {
-        ListNode* dummyNode = new ListNode(-1);
-        ListNode* temp = head;
-        ListNode* tempNode = head;
-
-        while(temp) {
-            while(tempNode) {
-                if(temp->val < tempNode->val) swap(temp->val, tempNode->val);
-                tempNode = tempNode->next;
+        auto dummy = new ListNode(INT_MIN, head);
+        for(auto curPrev = head, cur = head -> next; cur;) {
+            auto jPrev = dummy, j = jPrev -> next, curNext = cur -> next;
+            if(cur -> val > curPrev -> val)           // cur already at correct position...so no need to update cur
+                curPrev = cur;                        // only case where curPrev will need to be updated
+            else {
+                while(j -> val < cur -> val)
+                    jPrev = j, j = j -> next;
+                cur -> next = j;                      //  1️⃣
+                jPrev -> next = cur;                  //  2️⃣
+                curPrev -> next = curNext;            //  3️⃣    
             }
-
-            temp = temp->next;
-            tempNode = head;
+            cur = curNext;                            // move to next node now     
         }
-
-        return head;
+        return dummy -> next;
     }
 };
