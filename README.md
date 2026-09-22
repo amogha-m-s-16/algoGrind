@@ -72,9 +72,6 @@ One of the main goals of this repository is to recognize **patterns instead of m
 | 🌳 Tree Traversal      | Binary trees, BST           |
 | 🔗 Union Find          | Connectivity problems       |
 
----
-
-
 
 
 
